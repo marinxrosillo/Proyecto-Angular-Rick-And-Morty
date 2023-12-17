@@ -16,11 +16,11 @@ export class DetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private apiService: ApiService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.characterId = +params['id']; 
+      this.characterId = +params['id'];
       this.getCharacterDetails(this.characterId);
     });
   }
